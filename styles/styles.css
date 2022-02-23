@@ -1,0 +1,56 @@
+body {
+  background-color: #edf2f4;
+}
+
+section table {
+  margin: 5px auto;
+  padding: 5px;
+  border: 1px solid black;
+  font-size: 25px;
+  width: 150px;
+  height: 210px;
+}
+
+table,
+th,
+td {
+  border-collapse: collapse;
+  margin: 5px;
+  padding: 8px;
+  background-color: #8D99AE;
+}
+
+table th {
+  width: 60px;
+  height: 60px;
+  text-align: right;
+  border: 1px solid black;
+}
+
+table td {
+  border: 0;
+}
+
+h1 {
+  text-align: center;
+  margin: 0;
+  color: #2b2d42;
+}
+
+div[id="b-extern"] {
+  margin: 5px auto;
+  padding: 0;
+  border: 5px solid black;
+  width: 160px;
+  height: 220px;
+}
+
+hr {
+  border: 1px solid #2b2d42;
+}
+
+button {
+  width: 50px;
+  height: 50px;
+  font-size: 25px;
+}
