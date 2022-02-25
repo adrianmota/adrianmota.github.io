@@ -6,7 +6,6 @@
     <link href="styles/styles.css" rel="stylesheet" />
 </head>
 <body>
-    <!--Header of the page-->
     <header>
         <h1>Calculator</h1>
         <hr>
@@ -15,7 +14,7 @@
         <table>
             <thead>
                 <tr>
-                    <th colspan="4">0</th>
+                    <th id="box-result" colspan="4">0</th>
                 </tr>
             </thead>
             <tbody>
@@ -26,41 +25,43 @@
                     <td><button>1/x</button></td>
                 </tr>
                 <tr>
-                    <td><button>CE</button></td>
-                    <td><button>C</button></td>
-                    <td><button>X</button></td>
-                    <td><button>&divide;</button></td>
+                    <td><button id="btn-CE">CE</button></td>
+                    <td><button id="btn-C">C</button></td>
+                    <td><button id="btn-DEL">DEL</button></td>
+                    <td><button id="btn-divide">&divide;</button></td>
                 </tr>
                 <tr>
-                    <td><button>7</button></td>
-                    <td><button>8</button></td>
-                    <td><button>9</button></td>
-                    <td><button>x</button></td>
+                    <td><button id="btn-seven">7</button></td>
+                    <td><button id="btn-eight">8</button></td>
+                    <td><button id="btn-nine">9</button></td>
+                    <td><button id="btn-multiply">x</button></td>
                 </tr>
                 <tr>
-                    <td><button>4</button></td>
-                    <td><button>5</button></td>
-                    <td><button>6</button></td>
-                    <td><button>&minus;</button></td>
+                    <td><button id="btn-four">4</button></td>
+                    <td><button id="btn-five">5</button></td>
+                    <td><button id="btn-six">6</button></td>
+                    <td><button id="btn-minus">&minus;</button></td>
                 </tr>
                 <tr>
-                    <td><button>1</button></td>
-                    <td><button>2</button></td>
-                    <td><button>3</button></td>
-                    <td><button>&plus;</button></td>
+                    <td><button id="btn-one">1</button></td>
+                    <td><button id="btn-two">2</button></td>
+                    <td><button id="btn-three">3</button></td>
+                    <td><button id="btn-plus">&plus;</button></td>
                 </tr>
                 <tr>
-                    <td><button>&plusmn;</button></td>
-                    <td><button>0</button></td>
-                    <td><button>&period;</button></td>
-                    <td><button id="equals">&equals;</button></td>
+                    <td><button id="btn-plusmn">&plusmn;</button></td>
+                    <td><button id="btn-zero">0</button></td>
+                    <td><button id="btn-period">&period;</button></td>
+                    <td><button id="btn-equals">&equals;</button></td>
                 </tr>
             </tbody>
         </table>
     </section>
     <footer>
         <hr>
-        <!-- <p>Adrian Mota Silverio</p> -->
     </footer>
+    <!-- JS -->
+    <script src="scripts/main.js"></script>
+    <script src="scripts/operations.js"></script>
 </body>
 </html>
