@@ -16,6 +16,10 @@ const btnC = document.getElementById('btn-C');
 const btnPeriod = document.getElementById('btn-period');
 const btnPlusmn = document.getElementById('btn-plusmn');
 const btnEquals = document.getElementById('btn-equals');
+const btnOneByX = document.getElementById('btn-onebyx');
+const btnSup2 = document.getElementById('btn-sup2');
+const btnPercent = document.getElementById('btn-percent');
+const btnSqrt = document.getElementById('btn-sqrt');
 
 const btnPlus = document.getElementById('btn-plus');
 const btnMinus = document.getElementById('btn-minus');
@@ -28,31 +32,32 @@ let num2 = 0;
 let operation = '';
 let result = 0;
 
-function clearBoxResult() {
-    boxResult.textContent = '0';
-}
-
 btnEquals.onclick = function () {
     num2 = Number(boxResult.textContent);
-    console.log(operation);
     if (operation == btnPlus.textContent) {
         result = sum(num1, num2);
+        boxResult.textContent = String(result);
+        num1 = result;
     } else if (operation == btnMinus.textContent) {
         result = subtract(num1, num2);
+        boxResult.textContent = String(result);
+        num1 = result;
     } else if (operation == btnMultiply.textContent) {
         result = multiply(num1, num2);
+        boxResult.textContent = String(result);
+        num1 = result;
     } else if (operation == btnDivide.textContent) {
         result = divide(num1, num2);
+        boxResult.textContent = String(result);
+        num1 = result;
     }
-    boxResult.textContent = String(result);
 }
 
 // Handling basic operations
 
 btnPlus.onclick = function () {
     operation = btnPlus.textContent;
-    num1 += Number(boxResult.textContent);
-    // result = sum(num1, num2);
+    num1 = Number(boxResult.textContent);
     clearBoxResult();
 }
 
@@ -64,13 +69,13 @@ btnMinus.onclick = function () {
 
 btnMultiply.onclick = function () {
     operation = btnMultiply.textContent;
-    num1 *= Number(boxResult.textContent);
+    num1 = Number(boxResult.textContent);
     clearBoxResult();
 }
 
 btnDivide.onclick = function () {
     operation = btnDivide.textContent;
-    num1 /= Number(boxResult.textContent);
+    num1 = Number(boxResult.textContent);
     clearBoxResult();
 }
 
@@ -173,24 +178,24 @@ btnNine.onclick = function () {
     }
 }
 
-btnDEL.onclick = function() {
+btnDEL.onclick = function () {
     lengthBoxResultContent = boxResult.textContent.length;
     if (boxResult.textContent.length > 1) {
         boxResult.textContent = boxResult.textContent.substring(0, lengthBoxResultContent - 1);
     } else {
-        boxResult.textContent = '0';
+        clearBoxResult();
     }
 }
 
 btnCE.onclick = function () {
-    boxResult.textContent = '0';
+    clearBoxResult();
 }
 
 btnC.onclick = function () {
     num1 = 0;
     num2 = 0;
     result = 0;
-    boxResult.textContent = result;
+    clearBoxResult();
 }
 
 btnPeriod.onclick = function () {
@@ -203,7 +208,34 @@ btnPeriod.onclick = function () {
 
 btnPlusmn.onclick = function () {
     let boxResultContent = boxResult.textContent;
-    let number = -(Number(boxResultContent));
+    let number = Number(boxResultContent) * -1;
     boxResultContent = String(number);
     boxResult.textContent = boxResultContent;
+}
+
+btnOneByX.onclick = function () {
+    let number = Number(boxResult.textContent);
+    number = divideOneByX(number);
+    boxResult.textContent = String(number);
+}
+
+btnPercent.onclick = function () {
+    let symbol = btnPercent.textContent;
+    if (!boxResult.textContent.includes(symbol)) {
+        let number = Number(boxResult.textContent);
+        number /= 100;
+        boxResult.textContent = number;
+    }
+}
+
+btnSup2.onclick = function () {
+    let number = Number(boxResult.textContent);
+    number = number ** 2;
+    boxResult.textContent = number;
+}
+
+btnSqrt.onclick = function () {
+    let number = Number(boxResult.textContent);
+    number = Math.sqrt(number);
+    boxResult.textContent = number;
 }
