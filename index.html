@@ -3,6 +3,8 @@
 <head>
     <title>Calculator</title>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="styles/styles.css" rel="stylesheet" />
 </head>
 <body>
@@ -11,51 +13,53 @@
         <hr>
     </header>
     <section>
-        <table>
-            <thead>
-                <tr>
-                    <th id="box-result" colspan="4">0</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><button id="btn-percent">&percnt;</button></td>
-                    <td><button id="btn-sqrt">&Sqrt;</button></td>
-                    <td><button id="btn-sup2">x&sup2;</button></td>
-                    <td><button id="btn-onebyx">1/x</button></td>
-                </tr>
-                <tr>
-                    <td><button id="btn-CE">CE</button></td>
-                    <td><button id="btn-C">C</button></td>
-                    <td><button id="btn-DEL">DEL</button></td>
-                    <td><button id="btn-divide">&divide;</button></td>
-                </tr>
-                <tr>
-                    <td><button id="btn-seven">7</button></td>
-                    <td><button id="btn-eight">8</button></td>
-                    <td><button id="btn-nine">9</button></td>
-                    <td><button id="btn-multiply">x</button></td>
-                </tr>
-                <tr>
-                    <td><button id="btn-four">4</button></td>
-                    <td><button id="btn-five">5</button></td>
-                    <td><button id="btn-six">6</button></td>
-                    <td><button id="btn-minus">&minus;</button></td>
-                </tr>
-                <tr>
-                    <td><button id="btn-one">1</button></td>
-                    <td><button id="btn-two">2</button></td>
-                    <td><button id="btn-three">3</button></td>
-                    <td><button id="btn-plus">&plus;</button></td>
-                </tr>
-                <tr>
-                    <td><button id="btn-plusmn">&plusmn;</button></td>
-                    <td><button id="btn-zero">0</button></td>
-                    <td><button id="btn-period">&period;</button></td>
-                    <td><button id="btn-equals">&equals;</button></td>
-                </tr>
-            </tbody>
-        </table>
+        <div id="table-background-div">
+            <table id="calculator">
+                <thead>
+                    <tr>
+                        <th id="box-result" colspan="4">0</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><button id="btn-percent">&percnt;</button></td>
+                        <td><button id="btn-sqrt">&Sqrt;</button></td>
+                        <td><button id="btn-sup2">x&sup2;</button></td>
+                        <td><button id="btn-onebyx">1/x</button></td>
+                    </tr>
+                    <tr>
+                        <td><button id="btn-CE">CE</button></td>
+                        <td><button id="btn-C">C</button></td>
+                        <td><button id="btn-DEL">DEL</button></td>
+                        <td><button id="btn-divide">&divide;</button></td>
+                    </tr>
+                    <tr>
+                        <td><button id="btn-seven">7</button></td>
+                        <td><button id="btn-eight">8</button></td>
+                        <td><button id="btn-nine">9</button></td>
+                        <td><button id="btn-multiply">x</button></td>
+                    </tr>
+                    <tr>
+                        <td><button id="btn-four">4</button></td>
+                        <td><button id="btn-five">5</button></td>
+                        <td><button id="btn-six">6</button></td>
+                        <td><button id="btn-minus">&minus;</button></td>
+                    </tr>
+                    <tr>
+                        <td><button id="btn-one">1</button></td>
+                        <td><button id="btn-two">2</button></td>
+                        <td><button id="btn-three">3</button></td>
+                        <td><button id="btn-plus">&plus;</button></td>
+                    </tr>
+                    <tr>
+                        <td><button id="btn-plusmn">&plusmn;</button></td>
+                        <td><button id="btn-zero">0</button></td>
+                        <td><button id="btn-period">&period;</button></td>
+                        <td><button id="btn-equals">&equals;</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </section>
     <footer>
         <hr>

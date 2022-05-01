@@ -1,12 +1,8 @@
 html {
-  margin: 0;
   border: 2px solid #f3fafd;
   background-color: #8d99ae;
+  height: 99%;
 }
-
-/* body {
-  background-color: #748094;
-} */
 
 h1 {
   margin: 0;
@@ -15,34 +11,47 @@ h1 {
 }
 
 hr {
-  border: 1px solid #f3fafd;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #f3fafd;
 }
 
-table {
-  margin: 15px auto;
-  border: 10px solid #2b2d42;
-  /* border-radius: 20px; */
+[id="table-background-div"] {
+  margin: auto;
+  border-radius: 15px;
+  background-color: #2b2d42;
+  width: 380px;
+  height: 560px;
+}
+
+[id="calculator"] {
+  position: relative;
+  top: 16px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  border-width: 10px;
   border-collapse: collapse;
   padding: 0;
-  width: 400px;
-  height: 555px;
+  width: 350px;
+  height: 530px;
 }
 
-th[id="box-result"] {
+[id="box-result"] {
   margin: 0;
-  border: 2px solid #2b2d42;
-  /* border-radius: 5px; */
+  border-bottom: 2px solid #2b2d42;
   padding: 10px;
-  /* width: 60px; */
-  height: 65px;
-  text-align: right;
+  height: 60px;
   font-size: 40px;
+  text-align: right;
   background-color: #edf2f4;
 }
 
 td {
   margin: 0 auto;
-  /* border-collapse: collapse; */
+  border: 0;
+  border-collapse: collapse;
   padding: 8px;
   background-color: #edf2f4;
 }
@@ -50,45 +59,45 @@ td {
 button {
   margin: 0;
   border: 1px solid #2b2d42;
+  border-radius: 20px;
   padding: 0;
-  width: 80px;
+  width: 70px;
   height: 55px;
   font-size: 22px;
-  border-radius: 10px;
   background-color: #e4e8ec;
 }
 
 button:hover {
   margin: 0;
   border: 1px solid #2b2d42;
+  border-radius: 20px;
   padding: 0;
-  width: 80px;
+  width: 70px;
   height: 55px;
   font-size: 22px;
-  border-radius: 10px;
   background-color: #c9ccd3;
 }
 
 button:active {
   margin: 0;
   border: 1px solid #2b2d42;
+  border-radius: 20px;
   padding: 0;
-  width: 80px;
+  width: 70px;
   height: 55px;
   font-size: 22px;
-  border-radius: 10px;
   background-color: #e4e8ec;
 }
 
-button[id="btn-equals"] {
+[id="btn-equals"] {
   background-color: #d90429;
 }
 
-button[id="btn-equals"]:hover {
+[id="btn-equals"]:hover {
     background-color: #ef233c;
 }
 
-button[id="btn-equals"]:active {
+[id="btn-equals"]:active {
     background-color: #d90429;
 }
 

@@ -51,6 +51,8 @@ btnEquals.onclick = function () {
         boxResult.textContent = String(result);
         num1 = result;
     }
+    
+    operation = null;
 }
 
 // Handling basic operations
@@ -224,18 +226,23 @@ btnPercent.onclick = function () {
     if (!boxResult.textContent.includes(symbol)) {
         let number = Number(boxResult.textContent);
         number /= 100;
-        boxResult.textContent = number;
+        boxResult.textContent = String(number);
     }
 }
 
 btnSup2.onclick = function () {
     let number = Number(boxResult.textContent);
+    // lengthBoxResultContent = boxResult.textContent.length;
     number = number ** 2;
-    boxResult.textContent = number;
+    lengthOfTheNumber = String(number).length;
+
+    if (lengthOfTheNumber < 17) {
+        boxResult.textContent = String(number);
+    }
 }
 
 btnSqrt.onclick = function () {
     let number = Number(boxResult.textContent);
     number = Math.sqrt(number);
-    boxResult.textContent = number;
+    boxResult.textContent = String(number);
 }
